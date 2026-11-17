@@ -12,6 +12,32 @@ Food-service businesses often rely on intuition and manual estimates when planni
 
 ForecastIQ aims to address this challenge through predictive analytics and machine learning, providing operators with actionable insights to improve operational efficiency and support data-driven decisions.
 
+
+## System Workflow
+
+```mermaid
+flowchart TD
+    A["Historical Sales Data"] --> E["Data Processing"]
+    B["Weather Data"] --> E
+    C["Seasonality and Holidays"] --> E
+    D["Promotional Data"] --> E
+
+    E --> F["AI Forecasting Engine"]
+    F --> G["SARIMA"]
+    F --> H["XGBoost / LightGBM"]
+    F --> I["LSTM"]
+
+    G --> J["Demand Forecast"]
+    H --> J
+    I --> J
+
+    J --> K["Production Optimization"]
+    K --> L["Daily Preparation Recommendations"]
+    K --> M["Procurement Recommendations"]
+
+    L --> N["Reduced Food Waste"]
+    M --> O["Improved Inventory Planning"]
+```
 ## Key Objectives
 
 - Forecast customer demand at individual menu-item level.
