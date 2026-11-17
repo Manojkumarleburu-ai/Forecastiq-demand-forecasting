@@ -62,6 +62,26 @@ The business plan proposes the following machine learning models and technologie
 | MLflow | Model management |
 | Kubernetes | Production orchestration |
 
+
+### Machine Learning Architecture
+
+```mermaid
+flowchart LR
+    A["Input Data"] --> B["Data Processing"]
+    B --> C["Forecasting Models"]
+    C --> D["SARIMA"]
+    C --> E["XGBoost"]
+    C --> F["LightGBM"]
+    C --> G["LSTM"]
+    D --> H["Model Evaluation"]
+    E --> H
+    F --> H
+    G --> H
+    H --> I["Demand Prediction"]
+    I --> J["Production Optimization"]
+    J --> K["Business Insights"]
+```
+
 ## Proof of Concept
 
 The business plan describes a proof of concept developed in H2 2024 using anonymised sales data from a partner cloud kitchen.
@@ -72,6 +92,16 @@ The reported results were:
 - Estimated food-waste reduction of 18–31%, depending on the food-item category.
 
 These figures are results reported in the business plan and are not claims of independently verified commercial performance.
+
+
+### Key Proof-of-Concept Results
+
+| Performance Metric | Reported Result |
+|---|---:|
+| Forecast accuracy improvement (MAPE) | 23% |
+| Estimated food-waste reduction | 18–31% |
+
+**Note:** These are early-stage results reported in the business plan using anonymised partner cloud-kitchen sales data. They require further validation through commercial pilots.
 
 ## Business Model
 
@@ -85,6 +115,18 @@ ForecastIQ follows a subscription-based SaaS pricing model:
 
 The business plan estimates a blended average revenue per user (ARPU) of $140 per outlet per month and a steady-state gross margin of 72%.
 
+
+### SaaS Subscription Pricing
+
+```mermaid
+xychart-beta
+    x-axis ["Starter", "Growth", "Enterprise"]
+    y-axis "Monthly price (USD)" 0 --> 320
+    bar [99, 179, 299]
+```
+
+*Proposed monthly subscription price per outlet.*
+```
 ## Financial Projections
 
 The following figures are business-plan projections:
