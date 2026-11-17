@@ -1,153 +1,101 @@
-# Forecastiq-demand-forecasting
-AI-driven demand forecasting and production optimization for restaurants and cloud kitchens using machine learning.
-# ForecastIQ - AI-Driven Food Demand Forecasting
+# ForecastIQ – AI-Driven Food Demand Forecasting and Production Optimization
 
-ForecastIQ is my Master's capstone project in Business Analytics and Data Science at EU Business School.
+**Master’s Capstone Business Plan | Business Analytics and Data Science**
 
-The project focuses on using AI and machine learning to improve demand forecasting and production planning for quick-service restaurants and cloud kitchens.
+ForecastIQ is an AI-driven Software-as-a-Service (SaaS) concept designed to help Quick Service Restaurants (QSRs), cloud kitchens, and food-service operators forecast customer demand, optimize food production, and reduce food waste.
 
-## Project Objective
+The platform uses historical sales data, weather information, seasonality, and promotional activities to generate demand forecasts and daily preparation and procurement recommendations.
 
-The main objective is to help food-service operators:
+## Project Overview
 
-- Forecast item-level customer demand
-- Reduce overproduction and stock-outs
-- Improve food preparation planning
-- Reduce food waste
-- Support data-driven operational decisions
+Food-service businesses often rely on intuition and manual estimates when planning daily food production. This can lead to overproduction, food waste, stock-outs, and reduced profitability.
 
-## Problem Statement
+ForecastIQ aims to address this challenge through predictive analytics and machine learning, providing operators with actionable insights to improve operational efficiency and support data-driven decisions.
 
-Many restaurants and cloud kitchens still rely on intuition or simple moving averages for demand forecasting.
+## Key Objectives
 
-These methods may not fully capture factors such as:
+- Forecast customer demand at individual menu-item level.
+- Optimize daily food preparation and production quantities.
+- Reduce overproduction and unnecessary food waste.
+- Support procurement and inventory planning.
+- Minimize stock-outs while maintaining service levels.
+- Provide waste analytics and automated reporting.
+- Support sustainability and business profitability.
 
-- Historical sales
-- Seasonality
-- Weather
-- Holidays
-- Promotions
-- Day-of-week patterns
-- Local demand variations
+## Technology and Machine Learning Approach
 
-ForecastIQ was designed to combine these signals into a more advanced forecasting approach.
+The business plan proposes the following machine learning models and technologies:
 
-## Data
+| Technology | Purpose |
+|---|---|
+| SARIMA | Capturing stable temporal demand patterns |
+| XGBoost | Modelling demand using multiple variables |
+| LightGBM | Predictive demand modelling |
+| LSTM | Identifying sequential demand behaviour |
+| AWS | Cloud infrastructure and deployment |
+| MLflow | Model management |
+| Kubernetes | Production orchestration |
 
-The proof of concept used anonymized historical sales data from a partner cloud kitchen.
+## Proof of Concept
 
-Note: The original dataset is not published in this repository because it contains private business data.
+The business plan describes a proof of concept developed in H2 2024 using anonymised sales data from a partner cloud kitchen.
 
-Synthetic or sample datasets can be used for demonstration purposes.
+The reported results were:
 
-## Machine Learning Models
+- Approximately 23% improvement in MAPE compared with the operator's moving-average baseline.
+- Estimated food-waste reduction of 18–31%, depending on the food-item category.
 
-The project explores multiple forecasting approaches:
+These figures are results reported in the business plan and are not claims of independently verified commercial performance.
 
-- SARIMA
-- XGBoost
-- LightGBM
-- LSTM
+## Business Model
 
-These models were selected to capture both time-series patterns and multiple external demand signals.
+ForecastIQ follows a subscription-based SaaS pricing model:
 
-## Project Results
+| Plan | Proposed Price |
+|---|---:|
+| Starter | $99 / outlet / month |
+| Growth | $179 / outlet / month |
+| Enterprise | $299 / outlet / month |
 
-The proof-of-concept analysis demonstrated:
+The business plan estimates a blended average revenue per user (ARPU) of $140 per outlet per month and a steady-state gross margin of 72%.
 
-- Approximately 23% improvement in MAPE compared with a moving-average baseline
-- Estimated food-waste reduction of 18-31%, depending on product category
+## Financial Projections
 
-These results represent early-stage proof-of-concept findings and require further validation through commercial pilots.
+The following figures are business-plan projections:
 
-## Technology Stack
+| Metric | Projection |
+|---|---:|
+| Initial funding requirement | $320,000 |
+| Year 1 revenue | $58,800 |
+| Year 1 active outlets | 35 |
+| Year 5 active outlets | 850 |
+| Year 5 revenue | $1,428,000 |
+| Expected break-even | Month 17 |
+| Active outlets at break-even | 101 |
 
-### Programming
-- Python
-- SQL
+These are proposed financial forecasts, not actual achieved revenue or business performance.
 
-### Machine Learning
-- Scikit-learn
-- XGBoost
-- LightGBM
-- TensorFlow
-- Time Series Forecasting
+## Project Information
 
-### Data and Analytics
-- Pandas
-- NumPy
-- Data Visualization
-- Statistical Analysis
+- **Project:** ForecastIQ
+- **Author:** Manoj Kumar Leburu
+- **Programme:** Master’s in Business Analytics and Data Science
+- **Institution:** EU Business School
+- **Promoter:** Prof. MANTZEL Kay
+- **Submission date:** 15 July 2026
+- **Project type:** Master's Capstone Business Plan
 
-### Data Engineering and MLOps
-- Snowflake
-- dbt
-- MLflow
-- Apache Airflow
-- Docker
-- Kubernetes
+## Project Document
 
-### Cloud
-- AWS
-- AWS SageMaker
+The complete business plan is available in this repository:
 
-### Application Architecture
-- FastAPI
-- React.js
-- REST APIs
+📄 **[Read the ForecastIQ Business Plan (PDF)](ForecastIQ-Business-Plan.pdf)**
 
-## Project Workflow
+## Disclaimer
 
-1. Data Collection
-2. Data Cleaning and Preprocessing
-3. Exploratory Data Analysis
-4. Feature Engineering
-5. Baseline Forecasting
-6. Machine Learning Model Development
-7. Model Evaluation
-8. Demand Forecast Generation
-9. Production Quantity Recommendation
-10. Dashboard and Reporting Design
+This repository presents an academic business plan developed as part of a Master's capstone project. Business models, pricing, market assumptions, financial projections, and estimated outcomes are presented for academic and planning purposes. They should not be interpreted as verified commercial results.
 
-## Key Evaluation Metric
+---
 
-The main forecasting metric used in the proof of concept was:
-
-**MAPE - Mean Absolute Percentage Error**
-
-MAPE was used to compare model predictions with the existing moving-average forecasting baseline.
-
-## Business Impact
-
-ForecastIQ is designed to support restaurant operators by converting forecasting outputs into practical operational recommendations.
-
-Potential benefits include:
-
-- Lower food waste
-- Better inventory planning
-- Improved preparation decisions
-- Reduced stock-outs
-- Better use of historical sales data
-- Improved operational efficiency
-
-## Future Development
-
-Future work may include:
-
-- Real-time POS integrations
-- Automated model retraining
-- Additional external demand signals
-- Multi-location forecasting
-- Model monitoring
-- Interactive dashboards
-- Commercial pilot validation
-
-## Author
-
-**Manoj Kumar Leburu**
-
-Business Analytics and Data Science  
-EU Business School, Munich
-
-LinkedIn:  
-https://www.linkedin.com/in/manoj-kumar-leburu-b11a97222
+**Developed by Manoj Kumar Leburu**  
+Business Analytics | Data Science | Predictive Analytics | AI-driven Business Solutions
